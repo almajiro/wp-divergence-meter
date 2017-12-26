@@ -21,10 +21,15 @@ class Divergence_Meter_Widget extends WP_Widget{
 
 	public function widget($args, $instance)
 	{
+		echo '<section id="divergence_meter" class="widget"><h2 class="widget-title">Divergence Meter</h2>';
+		echo '<canvas id="divergence_meter_cv" width="400" height="135"></canvas>';
+		echo '<script src="'. plugins_url() . "/wp-divergence-meter/assets/js/divergence_meter.js". '"></script>';
+		echo '</section>';
 	}
 
 	public function form($instance)
 	{
+		echo '<br><b>Open the Steins;Gate.</b><br>';
 	}
 
 	public function update($new_instance, $old_instance)
@@ -32,6 +37,7 @@ class Divergence_Meter_Widget extends WP_Widget{
 		return $new_instance;
 	}
 }
+
 
 add_action('widgets_init', function()
 {
